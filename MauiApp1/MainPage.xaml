@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <Grid Padding="18" RowSpacing="12" ColumnSpacing="12">
+        <Grid.RowDefinitions>
+            <!-- Display -->
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <!-- Buttons (4 rows) -->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Display -->
+        <Frame Grid.Row="0" Grid.ColumnSpan="4" Padding="12" CornerRadius="8" BackgroundColor="#222" HasShadow="False">
+            <Label x:Name="DisplayLabel1"
+                   Text=""
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center"
+                   FontSize="36"
+                   TextColor="White"
+                   LineBreakMode="TailTruncation" />
+        </Frame>
+
+        <Frame Grid.Row="1" Grid.ColumnSpan="3" Padding="2,2,12,2" CornerRadius="8" BackgroundColor="#222" HasShadow="False" Grid.Column="1">
+            <Label x:Name="DisplayLabel2"
+                   Text="0"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center"
+                   FontSize="20"
+                   TextColor="GhostWhite"
+                   LineBreakMode="TailTruncation" Opacity="0.5" />
+        </Frame>
+
+        <!-- Row 1 -->
+        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="C" Clicked="OnClearClicked" FontSize="20" BackgroundColor="#D33" TextColor="White" />
+        <Button Grid.Row="2" Grid.Column="3" Text="/" Clicked="OnButtonClicked" FontSize="20" BackgroundColor="#6A6A6A" TextColor="White" />
+
+        <!-- Row 2 -->
+        <Button Grid.Row="3" Grid.Column="0" Text="7" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="3" Grid.Column="1" Text="8" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="3" Grid.Column="2" Text="9" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="3" Grid.Column="3" Text="*" Clicked="OnButtonClicked" FontSize="20" BackgroundColor="#6A6A6A" TextColor="White" />
+
+        <!-- Row 3 -->
+        <Button Grid.Row="4" Grid.Column="0" Text="4" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="4" Grid.Column="1" Text="5" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="4" Grid.Column="2" Text="6" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="4" Grid.Column="3" Text="-" Clicked="OnButtonClicked" FontSize="28" BackgroundColor="#6A6A6A" TextColor="White" />
+
+        <!-- Row 4 -->
+        <Button Grid.Row="5" Grid.Column="0" Text="1" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="5" Grid.Column="1" Text="2" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="5" Grid.Column="2" Text="3" Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="5" Grid.Column="3" Text="+" Clicked="OnButtonClicked" FontSize="28" BackgroundColor="#6A6A6A" TextColor="White" />
+
+        <!-- Row 5 -->
+        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="0" Clicked="OnButtonClicked" FontSize="22" HorizontalOptions="FillAndExpand" />
+        <Button Grid.Row="6" Grid.Column="2" Text="." Clicked="OnButtonClicked" FontSize="22" />
+        <Button Grid.Row="6" Grid.Column="3" Text="=" Clicked="OnEqualsClicked" FontSize="22" BackgroundColor="#0A84FF" TextColor="White" />
+    </Grid>
+</ContentPage>
