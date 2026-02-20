@@ -36,6 +36,7 @@ public partial class MainPage : ContentPage
             if (!operators.Contains(key))
             {
                 currentExpression = string.Empty;
+                UpdateDisplay();
             }
             justCalculated = false;
         }
@@ -113,6 +114,7 @@ public partial class MainPage : ContentPage
     private void OnEqualsClicked(object sender, EventArgs e)
     {
         currentExpression = calculator.IsAbleToCalculate(currentExpression) ? calculator.Calculate(currentExpression) : currentExpression;
+        justCalculated = true;  
         UpdateDisplay();
     }
 
